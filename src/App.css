@@ -1,0 +1,72 @@
+html{
+    scroll-behavior: smooth;
+}
+.content{
+    min-height: 2000px;
+  }
+  header,footer, .content{
+    background: #fff;
+  }
+  
+  .title footer{
+    text-align: center;
+    padding: 50px 15px;
+    margin-bottom: 30px;
+  }
+  footer{
+    height: 50vh!important;
+  }
+  .content h2 {
+    text-align: center;
+    margin: 0;
+    padding-top: 200px;
+  }
+  a.navbar-brand:hover,a.nav-link:hover{
+    color: #ca375f !important;
+  }
+  
+   .nav-link.active  {
+    border-bottom: 1px solid #ca375f;
+    color: #ca375f;
+    padding-bottom: .25em;
+    text-decoration: none;
+    background-image: url("data:image/svg+xml;charset=utf8,%3Csvg id='squiggle-link' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' xmlns:ev='http://www.w3.org/2001/xml-events' viewBox='0 0 20 4'%3E%3Cstyle type='text/css'%3E.squiggle{animation:shift .3s linear infinite;}@keyframes shift {from {transform:translateX(0);}to {transform:translateX(-20px);}}%3C/style%3E%3Cpath fill='none' stroke='%23453886' stroke-width='2' class='squiggle' d='M0,3.5 c 5,0,5,-3,10,-3 s 5,3,10,3 c 5,0,5,-3,10,-3 s 5,3,10,3'/%3E%3C/svg%3E");
+    background-position: bottom;
+    background-repeat: repeat-x;
+    background-size: 20%;
+    border-bottom: 0;
+    padding-bottom: .3em;
+    text-decoration: none;
+  }
+
+
+  
+  .avatar{
+    height:230px
+  }
+  .mastery-logos img{
+    -webkit-filter: grayscale(100%);
+    -moz-filter: grayscale(100%);
+      -o-filter: grayscale(100%);
+     -ms-filter: grayscale(100%);
+         filter: grayscale(100%); 
+  }
+  .mastery-logos img:hover{
+    -webkit-filter: grayscale(0%);
+    -moz-filter: grayscale(0%);
+      -o-filter: grayscale(0%);
+     -ms-filter: grayscale(0%);
+         filter: grayscale(0%); 
+  }
+  .social-link{
+    color: #f05f3b;
+    font-size: 3rem;
+  }
+  
+  @media (min-width: 768px) { 
+  aside{
+    height: 100vh;
+  }  
+  }
+
+  
