@@ -1,7 +1,9 @@
 import React from 'react';
 import './App.css';
 import Navbar from './components/Navbar';
-import avatar from './images/ancel.jpg'
+import Typist from 'react-typist';
+
+import Background from './components/Background';
 import java from './images/logos/java.png'
 import spring from './images/logos/spring.png'
 import kubernetes from './images/logos/kubernetes.png'
@@ -21,66 +23,112 @@ import jira from './images/logos/jira.png'
 import { Timeline, TimelineItem } from 'vertical-timeline-component-for-react';
 
 class App extends React.Component {
+    state = {
+        renderMsg: false,
+    }
+
+    onHeaderTyped = () => {
+        this.setState({ renderMsg: true });
+
+    }
+    componentDidMount() {
+        const TagCloud = require('TagCloud');
+        const myTags = [
+            'java', 'spring', 'spring-boot', 'netflix eureka', 'netflix zuul', 'swagger', 'mongodb', 'oracle 11g', 'jsf', 'graphql', 'jetty', 'weblogic', 'redis', 'hibernate',
+            'kubernetes', 'apache camel', 'query dsl', 'openshift', 'docker',
+            'aws', 'react', 'angular', 'ngrx', 'rxjs',
+            'jenkins', 'jira', 'polymer',
+        ];
+        TagCloud('.mastery-logos', myTags, {
+            // radius in px
+            radius: 350,
+            // animation speed
+            // slow, normal, fast
+            maxSpeed: 'normal',
+            initSpeed: 'normal',
+            // 0 = top
+            // 90 = left
+            // 135 = right-bottom
+            // interact with cursor move on mouse out
+            keep: true
+        });
+    }
+
     render() {
         return (
 
-            <div className="container-fluid ">
-                {/* Intro */}
-                <div class="download">
-                <a class="face-button" download="AncelResume.pdf" href="./resources/AncelResume.pdf">
-
-                    <div class="face-primary">
-                        <span class="icon fa fa-download"></span>
-                        Download Resume
-                    </div>
-
-                    <div class="face-secondary">
-                        <span class="icon fa fa-hdd-o"></span>
-                        Size: 54 kb
-                    </div>
-
-                </a>
-                </div>
+            <div className="container-fluid">
+                <Background/>
                 <header className=" min-vh-100 d-flex align-items-center flex-column justify-content-center text-center " id="home">
 
-                    <img src={avatar} class=" img-fluid rounded-circle avatar" alt="Ancel Litto" />
+                    <Typist
+                        avgTypingDelay={100}
+                        onTypingDone={this.onHeaderTyped}
+                    >
+                        <span className="display-1">
+                            Hi!&nbsp; 
+                            <Typist.Delay ms={600} />
+                          Nice to meet you&nbsp;
+                        <Typist.Delay ms={600} />
+                        <span className="accent1">:)</span>
+                        <Typist.Backspace count={24} delay={1000} />
+                             I'm&nbsp;<span className="accent1">Ancel Litto</span>
+                        <Typist.Backspace count={15} delay={1000} />
+                       I'm a&nbsp;
+                        <Typist.Delay ms={600} />
+                        <span className="accent1">Polyglot Pragmatic Developer</span></span>
+                    </Typist>
+                    <div>
+                        <div className={`h1 ${this.state.renderMsg ? "fadeIn" : "fadeOut"}`}>
+                            My primary area of interest is in back-end and front-end technologies. With over 8 years of experience,
+                            I have architectured and built complex enterprise grade applications. I am passionate about coding and learning new technologies. 
+                            I have the most experience in the below skills  
+                            <p className="accent2">
+                                Java | Spring | Spring Boot | Microservice | Kubernetes | Angular
+                            </p>
+                            <br />
+                            <p className={`h3`}>
+                             You can read about my skills, experience, education and much much more in the attached pdf which you can find below
+                             </p>
+                            <div className="contacts">
+                                <a href="mailto:contact@ancel.codes" className="social-link far fa-envelope " target="_blank" rel="noopener noreferrer" alt="email" ></a>
+                                <a href="https://www.linkedin.com/in/ancellitto" className="social-link fab fa-linkedin " target="_blank" rel="noopener noreferrer" alt="linkedin"></a>
+                                <a href="https://github.com/ancellitto" className="social-link  fab fa-git " target="_blank" rel="noopener noreferrer" alt="github"></a>
+                            </div>
+                            <br/>
+                            <a href="#mastery" class="scroll-down" address="true"></a>                  
+                        </div>
 
-                    <large class="display-4">Polyglot Pragmatic Developer</large>
-                    <p class="text-muted">
-                        Java | Spring | Spring Boot | Microservice | Kubernetes | Angular
-                    </p>
-                    <div >
-                        <a href="mailto:contact@ancel.codes" class="social-link far fa-envelope p-2" target="_blank" rel="noopener noreferrer" alt="email" />
-                        <a href="https://www.linkedin.com/in/ancellitto" class="social-link fab fa-linkedin p-2" target="_blank" rel="noopener noreferrer" alt="linkedin" />
-                        <a href="https://github.com/ancellitto" class="social-link  fab fa-github-square p-2" target="_blank" rel="noopener noreferrer" alt="github" />
                     </div>
+
 
                 </header>
 
                 <div className="row">
                     {/* Navigator */}
                     <Navbar />
+
                     {/* Main Content */}
-                    <main className="col justify-content-center">
+                    <main className="col justify-content-center p-0 m-0">
                         <div className="content text-center">
                             <div id="mastery" className="container-fluid " >
                                 <h1 className="pt-5">Mastery</h1>
-                                <div class="row align-items-center mastery-logos">
-                                    <div class="col m-2"><a href="https://www.java.com/" target="_blank" rel="noopener noreferrer"><img src={java} alt="java" width="120" /></a></div>
-                                    <div class="col m-2"><a href="https://spring.io/" target="_blank" rel="noopener noreferrer"><img src={spring} width="120" alt="spring" /></a></div>
-                                    <div class="col m-2"><a href="https://kubernetes.io/" target="_blank" rel="noopener noreferrer"><img src={kubernetes} width="120" alt="Kubernetes" /></a></div>
-                                    <div class="col m-2"><a href="https://www.openshift.com/" target="_blank" rel="noopener noreferrer"><img src={openshift} width="120" alt="Kubernetes" /></a></div>
-                                   <div class="col m-2"><a href="https://aws.amazon.com/" target="_blank" rel="noopener noreferrer"><img src={aws} width="120" alt="aws" /></a></div>
-                                    <div class="col m-2"><a href="https://www.docker.com/" target="_blank" rel="noopener noreferrer"><img src={docker} width="120" alt="docker" /></a></div>
-                                    <div class="col m-2"><a href="https://reactjs.org/" target="_blank" rel="noopener noreferrer"><img src={react} width="120" alt="react" /></a></div>
-                                    <div class="col m-2"><a href="https://angular.io/" target="_blank" rel="noopener noreferrer"><img src={angular} width="120" alt="angular" /></a></div>
-                                    <div class="col m-2"><a href="https://www.polymer-project.org/" target="_blank" rel="noopener noreferrer"><img src={polymer} width="120" alt="polymer" /></a></div>
-                                    <div class="col m-2"><a href="https://vaadin.com/" target="_blank" rel="noopener noreferrer"><img src={vaadin} width="120" alt="vaadin" /></a></div>
-                                    <div class="col m-2"><a href="http://www.gwtproject.org/" target="_blank" rel="noopener noreferrer"><img src={gwt} width="120" alt="gwt" /></a></div>
-                                    <div class="col m-2"><a href="https://git-scm.com/" target="_blank" rel="noopener noreferrer"><img src={git} width="120" alt="git" /></a></div>
-                                    <div class="col m-2"><a href="https://getbootstrap.com/" target="_blank" rel="noopener noreferrer"><img src={bootstrap} width="120" alt="bootstrap" /></a></div>
-                                    <div class="col m-2"><a href="https://jenkins.io/" target="_blank" rel="noopener noreferrer"><img src={jenkins} width="120" alt="jenkins" /></a></div>
-                                    <div class="col m-2"><a href="https://www.atlassian.com/jira" target="_blank" rel="noopener noreferrer"><img src={jira} width="120" alt="jira" /></a></div>
+                                <div className="row d-flex align-items-center mastery-logos justify-content-center">
+                                    {/* <div className="col m-2"><a href="https://www.java.com/" target="_blank" rel="noopener noreferrer"><img src={java} alt="java" width="120" /></a></div>
+                                    <div className="col m-2"><a href="https://spring.io/" target="_blank" rel="noopener noreferrer"><img src={spring} width="120" alt="spring" /></a></div>
+                                    <div className="col m-2"><a href="https://kubernetes.io/" target="_blank" rel="noopener noreferrer"><img src={kubernetes} width="120" alt="Kubernetes" /></a></div>
+                                    <div className="col m-2"><a href="https://www.openshift.com/" target="_blank" rel="noopener noreferrer"><img src={openshift} width="120" alt="Kubernetes" /></a></div>
+                                    <div className="col m-2"><a href="https://aws.amazon.com/" target="_blank" rel="noopener noreferrer"><img src={aws} width="120" alt="aws" /></a></div>
+                                    <div className="col m-2"><a href="https://www.docker.com/" target="_blank" rel="noopener noreferrer"><img src={docker} width="120" alt="docker" /></a></div>
+                                    <div className="col m-2"><a href="https://reactjs.org/" target="_blank" rel="noopener noreferrer"><img src={react} width="120" alt="react" /></a></div>
+                                    <div className="col m-2"><a href="https://angular.io/" target="_blank" rel="noopener noreferrer"><img src={angular} width="120" alt="angular" /></a></div>
+                                    <div className="col m-2"><a href="https://www.polymer-project.org/" target="_blank" rel="noopener noreferrer"><img src={polymer} width="120" alt="polymer" /></a></div>
+                                    <div className="col m-2"><a href="https://vaadin.com/" target="_blank" rel="noopener noreferrer"><img src={vaadin} width="120" alt="vaadin" /></a></div>
+                                    <div className="col m-2"><a href="http://www.gwtproject.org/" target="_blank" rel="noopener noreferrer"><img src={gwt} width="120" alt="gwt" /></a></div>
+                                    <div className="col m-2"><a href="https://git-scm.com/" target="_blank" rel="noopener noreferrer"><img src={git} width="120" alt="git" /></a></div>
+                                    <div className="col m-2"><a href="https://getbootstrap.com/" target="_blank" rel="noopener noreferrer"><img src={bootstrap} width="120" alt="bootstrap" /></a></div>
+                                    <div className="col m-2"><a href="https://jenkins.io/" target="_blank" rel="noopener noreferrer"><img src={jenkins} width="120" alt="jenkins" /></a></div>
+                                    <div className="col m-2"><a href="https://www.atlassian.com/jira" target="_blank" rel="noopener noreferrer"><img src={jira} width="120" alt="jira" /></a></div> */}
                                 </div>
                             </div>
                             <div id="expertise" className="container-fluid " >
@@ -210,7 +258,7 @@ class App extends React.Component {
                                         <h3> Software Engineer</h3>
                                         <h4>SunTec Business Solution</h4>
                                         <h5>Onsite: Nuwaza Softwares, JLT, Dubai :(Oct 2014-Jan 2015)</h5>
-                                        <p>
+                                        <div>
                                             Was responsible for Researching and developing various modules from ground
                                             up for the next generation enterprise application. Coordinated a team of 5.
                                             <br />
@@ -263,7 +311,7 @@ class App extends React.Component {
                                             </p>
                                             <br />
                                             <strong>Technologies :</strong>Java,GWT,Polymer,Antlr String Template
-                                        </p>
+                                        </div>
                                     </TimelineItem>
                                 </Timeline>
                             </div>
@@ -324,4 +372,5 @@ class App extends React.Component {
 
     }
 }
+
 export default App;

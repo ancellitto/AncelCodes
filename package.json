@@ -4,14 +4,16 @@
   "private": true,
   "dependencies": {
     "@trendmicro/react-sidenav": "^0.4.5",
+    "TagCloud": "^2.2.0",
     "bootstrap": "^4.3.1",
     "react": "^16.8.6",
     "react-bootstrap": "^1.0.0-beta.8",
     "react-dom": "^16.8.6",
-    "react-particles-js": "^2.6.0",
+    "react-particles-js": "^2.7.1",
     "react-router-dom": "^5.0.0",
     "react-scripts": "3.0.1",
     "react-scrollspy": "^3.4.0",
+    "react-typist": "^2.0.5",
     "vertical-timeline-component-for-react": "^1.0.6"
   },
   "scripts": {
