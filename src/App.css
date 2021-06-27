@@ -1,3 +1,5 @@
+@import url('//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css');
+
 html{
     scroll-behavior: smooth;
 }
@@ -62,11 +64,50 @@ html{
     color: #f05f3b;
     font-size: 3rem;
   }
+  .download {
+    display:-webkit-flex;
+    display:flex;
+    list-style-type:none;
+    padding:0;
+    justify-content:flex-end;
+    margin-right:auto;
+}
+
+
+.face-button {
+  height: 64px;
+  display: inline-block;
+  border: 3px solid #e43;
+  font-family: "Roboto", sans-serif;
+  font-size: 20px;
+  font-weight: 500;
+  text-align: center;
+  text-decoration: none;
+  color: #e43;
+  overflow: hidden;
+}
+.face-button .icon {
+  margin-right: 6px;
+}
+.face-button .face-primary,
+.face-button .face-secondary {
+  display: block;
+  padding: 0 32px;
+  line-height: 64px;
+  transition: margin 0.4s;
+}
+.face-button .face-primary {
+  background-color: #e43;
+  color: #fff;
+}
+.face-button:hover .face-primary {
+  margin-top: -64px;
+}
   
   @media (min-width: 768px) { 
   aside{
     height: 100vh;
   }  
   }
-
+  
   

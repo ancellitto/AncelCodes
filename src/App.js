@@ -4,6 +4,8 @@ import Navbar from './components/Navbar';
 import avatar from './images/ancel.jpg'
 import java from './images/logos/java.png'
 import spring from './images/logos/spring.png'
+import kubernetes from './images/logos/kubernetes.png'
+import openshift from './images/logos/openshift.png'
 import vaadin from './images/logos/vaadin.png'
 import gwt from './images/logos/gwt.png'
 import git from './images/logos/git.png'
@@ -24,20 +26,35 @@ class App extends React.Component {
 
             <div className="container-fluid ">
                 {/* Intro */}
+                <div class="download">
+                <a class="face-button" download="AncelResume.pdf" href="./resources/AncelResume.pdf">
+
+                    <div class="face-primary">
+                        <span class="icon fa fa-download"></span>
+                        Download Resume
+                    </div>
+
+                    <div class="face-secondary">
+                        <span class="icon fa fa-hdd-o"></span>
+                        Size: 54 kb
+                    </div>
+
+                </a>
+                </div>
                 <header className=" min-vh-100 d-flex align-items-center flex-column justify-content-center text-center " id="home">
 
                     <img src={avatar} class=" img-fluid rounded-circle avatar" alt="Ancel Litto" />
-                  
-                        <large class="display-4">Polyglot Pragmatic Developer</large>
-                        <p class="text-muted">
-                            Java | Spring Boot | Microservice | Vaadin | ReactJs | PWA
-                        </p>
-                        <div >
-                        <a href="mailto:contact@ancel.codes" class="social-link far fa-envelope p-2" target="_blank" rel="noopener noreferrer" alt="email"/>
-                        <a href="https://www.linkedin.com/in/ancellitto" class="social-link fab fa-linkedin p-2" target="_blank" rel="noopener noreferrer" alt="linkedin"/>
-                        <a href="https://github.com/ancellitto" class="social-link  fab fa-github-square p-2" target="_blank" rel="noopener noreferrer" alt="github"/>
-                            </div>
-                  
+
+                    <large class="display-4">Polyglot Pragmatic Developer</large>
+                    <p class="text-muted">
+                        Java | Spring | Spring Boot | Microservice | Kubernetes | Angular
+                    </p>
+                    <div >
+                        <a href="mailto:contact@ancel.codes" class="social-link far fa-envelope p-2" target="_blank" rel="noopener noreferrer" alt="email" />
+                        <a href="https://www.linkedin.com/in/ancellitto" class="social-link fab fa-linkedin p-2" target="_blank" rel="noopener noreferrer" alt="linkedin" />
+                        <a href="https://github.com/ancellitto" class="social-link  fab fa-github-square p-2" target="_blank" rel="noopener noreferrer" alt="github" />
+                    </div>
+
                 </header>
 
                 <div className="row">
@@ -49,32 +66,32 @@ class App extends React.Component {
                             <div id="mastery" className="container-fluid " >
                                 <h1 className="pt-5">Mastery</h1>
                                 <div class="row align-items-center mastery-logos">
-                                    <div class="col m-2"><a href="https://www.java.com/" target="_blank" rel="noopener noreferrer"><img src={java} alt="java"width="120" /></a></div>
-                                    <div class="col m-2"><a href="https://spring.io/" target="_blank" rel="noopener noreferrer"><img src={spring} width="120" alt="spring"/></a></div>
-                                    <div class="col m-2"><a href="https://vaadin.com/" target="_blank" rel="noopener noreferrer"><img src={vaadin} width="120" alt="vaadin"/></a></div>
-                                    <div class="col m-2"><a href="http://www.gwtproject.org/" target="_blank" rel="noopener noreferrer"><img src={gwt} width="120" alt="gwt"/></a></div>
-                                    <div class="col m-2"><a href="https://git-scm.com/" target="_blank" rel="noopener noreferrer"><img src={git} width="120" alt="git"/></a></div>
-                                    <div class="col m-2"><a href="https://aws.amazon.com/" target="_blank" rel="noopener noreferrer"><img src={aws} width="120" alt="aws"/></a></div>
-                                    <div class="col m-2"><a href="https://www.docker.com/" target="_blank" rel="noopener noreferrer"><img src={docker} width="120" alt="docker"/></a></div>
-                                    <div class="col m-2"><a href="https://reactjs.org/" target="_blank" rel="noopener noreferrer"><img src={react} width="120" alt="react"/></a></div>
+                                    <div class="col m-2"><a href="https://www.java.com/" target="_blank" rel="noopener noreferrer"><img src={java} alt="java" width="120" /></a></div>
+                                    <div class="col m-2"><a href="https://spring.io/" target="_blank" rel="noopener noreferrer"><img src={spring} width="120" alt="spring" /></a></div>
+                                    <div class="col m-2"><a href="https://kubernetes.io/" target="_blank" rel="noopener noreferrer"><img src={kubernetes} width="120" alt="Kubernetes" /></a></div>
+                                    <div class="col m-2"><a href="https://www.openshift.com/" target="_blank" rel="noopener noreferrer"><img src={openshift} width="120" alt="Kubernetes" /></a></div>
+                                   <div class="col m-2"><a href="https://aws.amazon.com/" target="_blank" rel="noopener noreferrer"><img src={aws} width="120" alt="aws" /></a></div>
+                                    <div class="col m-2"><a href="https://www.docker.com/" target="_blank" rel="noopener noreferrer"><img src={docker} width="120" alt="docker" /></a></div>
+                                    <div class="col m-2"><a href="https://reactjs.org/" target="_blank" rel="noopener noreferrer"><img src={react} width="120" alt="react" /></a></div>
                                     <div class="col m-2"><a href="https://angular.io/" target="_blank" rel="noopener noreferrer"><img src={angular} width="120" alt="angular" /></a></div>
-                                    <div class="col m-2"><a href="https://www.polymer-project.org/" target="_blank" rel="noopener noreferrer"><img src={polymer} width="120" alt="polymer"/></a></div>
-                                    <div class="col m-2"><a href="https://getbootstrap.com/" target="_blank" rel="noopener noreferrer"><img src={bootstrap} width="120" alt="bootstrap"/></a></div>
-                                    <div class="col m-2"><a href="https://jenkins.io/" target="_blank" rel="noopener noreferrer"><img src={jenkins} width="120" alt="jenkins"/></a></div>
-                                    <div class="col m-2"><a href="https://www.atlassian.com/jira" target="_blank" rel="noopener noreferrer"><img src={jira} width="120" alt="jira"/></a></div>
+                                    <div class="col m-2"><a href="https://www.polymer-project.org/" target="_blank" rel="noopener noreferrer"><img src={polymer} width="120" alt="polymer" /></a></div>
+                                    <div class="col m-2"><a href="https://vaadin.com/" target="_blank" rel="noopener noreferrer"><img src={vaadin} width="120" alt="vaadin" /></a></div>
+                                    <div class="col m-2"><a href="http://www.gwtproject.org/" target="_blank" rel="noopener noreferrer"><img src={gwt} width="120" alt="gwt" /></a></div>
+                                    <div class="col m-2"><a href="https://git-scm.com/" target="_blank" rel="noopener noreferrer"><img src={git} width="120" alt="git" /></a></div>
+                                    <div class="col m-2"><a href="https://getbootstrap.com/" target="_blank" rel="noopener noreferrer"><img src={bootstrap} width="120" alt="bootstrap" /></a></div>
+                                    <div class="col m-2"><a href="https://jenkins.io/" target="_blank" rel="noopener noreferrer"><img src={jenkins} width="120" alt="jenkins" /></a></div>
+                                    <div class="col m-2"><a href="https://www.atlassian.com/jira" target="_blank" rel="noopener noreferrer"><img src={jira} width="120" alt="jira" /></a></div>
                                 </div>
                             </div>
                             <div id="expertise" className="container-fluid " >
                                 <h1 className="pt-5">Expertise</h1>
                                 <ul className="text-left">
+                                    <li> Experience in migrating monolithic application to microservices</li>
+                                    <li> Experience in leading distributed teams</li>
                                     <li> Implements efficient solutions to complex problems</li>
-                                    <li> Exposure to Agile Methodologies</li>
-                                    <li> Good knowledge in developing algorithms</li>
                                     <li> Strong exposure to advanced development methodologies</li>
-                                    <li> Good exposure to the entire Software Development Life Cycle</li>
+                                    <li> Good knowledge in developing algorithms</li>
                                     <li> Self learner and keeps up to date with the latest technologies</li>
-                                    <li> Dedicated ,passionate and responsible to deliver the assigned work on time.</li>
-
                                 </ul>
                             </div>
                             <div id="experience" className="container-fluid " >
@@ -82,7 +99,61 @@ class App extends React.Component {
                                 <Timeline lineColor={'#ddd'}>
                                     <TimelineItem
                                         key="001"
-                                        dateText="May, 2017-Present"
+                                        dateText="July, 2019-Present"
+                                        style={{ color: '#F05F3B' }}
+                                        dateInnerStyle={{ background: '#F05F3B' }}
+                                    >
+                                        <h3>Lead Software Engineer</h3>
+                                        <h4>Accenture, Latvia</h4>
+                                        <p>
+                                            <strong>
+                                                Project: Event Management Tool for a large banking institution (July 2020- Present)
+                                            </strong>
+                                            <br />
+                                            Event Management Tool  helps to efficiently plan, manage and conduct events organized by the
+                                            bank for its clients.The tool was built on legacy technologies like java 6 and jsf now moving
+                                            towards newer technology stack using microservices with spring boot, docker, kubernetes and
+                                            open shift. I am involved in migrating the project to a newer tech stack. I am helping in
+                                            defining the new target architecture and lay migration strategy to gracefully move away from
+                                            the legacy technologies
+
+                                            <br />
+                                            <strong>Technologies :</strong>Java 6,8, Spring 5, Spring Boot, Hibernate, Docker, Kubernetes, OpenShift, Angular, Jsf, Weblogic
+                                        </p>
+                                        <p>
+                                            <strong>
+                                                Project: Employee Management System(February 2021- Present)
+                                            </strong>
+                                            <br />
+
+                                            Employee Management System (EMS) is a project targeted to build up the Intern's skills  who have
+                                            newly joined the company. The main focus is to build a system that would help in managing,
+                                            training and staffing of the interns.
+
+                                            <br />
+                                            <strong>Technologies :</strong>Java 6,8, JSF, Weblogic, Oracle 10g
+                                        </p>
+                                        <p>
+                                            <strong>
+                                                Project: Advisory tool for Relationship Managers for a large banking institution in Switzerland(July 2019- July 2020)
+                                            </strong>
+                                            <br />
+
+                                            The Advisory tool is used by Relationship Managers to engage with their clients. It aggregates
+                                            data from various downstream services  and provides all the necessary information and statistics
+                                            to the Relationship Manager. I worked as a full-stack developer and used Angular for frontend and
+                                            Java for backend. Did architecture  and groundworks for transforming the monolithic application
+                                            to micro frontend and microservices. Setup the main pillars of microservices architecture like
+                                            service gateway, registry all the way from development environment to production
+
+
+                                            <br />
+                                            <strong>Technologies :</strong>Java, Spring Boot, Netflix Eureka, Zuul, Ribbon, Micro-services, Micro-frontends, Angular 8, Ngrx, Rxjs, Apache Camel.
+                                        </p>
+                                    </TimelineItem>
+                                    <TimelineItem
+                                        key="002"
+                                        dateText="May, 2017-June, 2019"
                                         style={{ color: '#F05F3B' }}
                                         dateInnerStyle={{ background: '#F05F3B' }}
                                     >
@@ -91,46 +162,46 @@ class App extends React.Component {
                                         <p>
                                             <br />
                                             <strong>Client  : MARKANT Deutschland GmbH
-                                            <br />
+                                                <br />
                                                 Project: Vxplorer (May 2017 – Present)
-                                            <br />
+                                                <br />
                                             </strong>
                                             Vxplorer is a Enterprise Content Management framework to cater the needs
                                             for managing the content for the Markant. A core framework was designed and
-                                             developed from scratch which was used to create multiple solutions for various
-                                              products across the company. The framework is robust enough to handle all the
-                                              use cases and now is also launched as a product by the company
-                                         </p>
+                                            developed from scratch which was used to create multiple solutions for various
+                                            products across the company. The framework is robust enough to handle all the
+                                            use cases and now is also launched as a product by the company
+                                        </p>
                                         <p>
                                             Vaadin and java were the base technologies for developing the frameworks. A web application
-                                             java module and a server java application was made. Core advantage of the software is that
-                                             it is fully customizable. A business user can configure various business requirements for
-                                              content management through the application and web application for the configured business
-                                               requirements will be deployed.
-                                          <br />
+                                            java module and a server java application was made. Core advantage of the software is that
+                                            it is fully customizable. A business user can configure various business requirements for
+                                            content management through the application and web application for the configured business
+                                            requirements will be deployed.
+                                            <br />
                                             <strong>Technologies :</strong>Vaadin, GWT, Java
-                                         </p>
+                                        </p>
                                         <p>
                                             <br />
                                             <strong>Client  : Movado USA
-                                            <br />
+                                                <br />
                                                 Project: Movado Portal (March 2018 – Present)
-                                            <br />
+                                                <br />
                                             </strong>
 
                                             An online portal for Movado Group for its employees and user base.
                                             Development and architecturing  of the backend for various stages of
                                             the portal including  various section like employee login, employee sales
-                                             and ecommerce functionalities like shopping cart and wish list etc.Spring
-                                              boot is the core technology used as the backend which exposes various services
-                                              which is consumed  by the front end.
+                                            and ecommerce functionalities like shopping cart and wish list etc.Spring
+                                            boot is the core technology used as the backend which exposes various services
+                                            which is consumed  by the front end.
 
-                                          <br />
+                                            <br />
                                             <strong>Technologies :</strong>Spring Boot ,Java,Restful web services
-                                         </p>
+                                        </p>
                                     </TimelineItem>
                                     <TimelineItem
-                                        key="002"
+                                        key="003"
                                         dateText=" July 2013-May 2017"
                                         style={{ color: '#F05F3B' }}
                                         dateInnerStyle={{ background: '#F05F3B' }}
@@ -156,8 +227,8 @@ class App extends React.Component {
                                             Distributed Application Environment Manager was capable of building and managing
                                             a multi node distributed cluster environment and  deploy an application across various
                                             nodes of a cluster, It had a communication channel which could detect when a node is added,
-                                             deleted or crashed. It had the capabilities of invoking various services of the
-                                             deployed application in the cluster.
+                                            deleted or crashed. It had the capabilities of invoking various services of the
+                                            deployed application in the cluster.
                                             <br />
                                             <strong>Developed a web based graphical modeling framework
                                                 <br />
@@ -170,7 +241,7 @@ class App extends React.Component {
                                             </strong>
                                             Data visualization involves converting statistical data into  visualization .This
                                             framework was capable of converting data into any type of visualizations like Line
-                                             charts, Bar Graphs, Spider charts, pie charts graphs, charts, histogram
+                                            charts, Bar Graphs, Spider charts, pie charts graphs, charts, histogram
                                             <p>Designed and developed the underlying structure which can convert data into any
                                                 type of visualization, designed Algorithms and developed various charts like line
                                                 chart, bar chart, and pi chart
@@ -185,14 +256,14 @@ class App extends React.Component {
                                             The tool was intelligent enough to provide a dynamic layout for class, component and
                                             sequence diagrams
                                             <p>	was responsible for designing and developing the web application, Developed complex
-                                                 Layout algorithms which could create a class diagram from a java project for Dynamic
-                                                  class diagram, Developed layouts for component diagram and sequence diagram
-                                                  generation, Integrated with other in house web services for creating a continuous
-                                                   integration platform
+                                                Layout algorithms which could create a class diagram from a java project for Dynamic
+                                                class diagram, Developed layouts for component diagram and sequence diagram
+                                                generation, Integrated with other in house web services for creating a continuous
+                                                integration platform
                                             </p>
                                             <br />
                                             <strong>Technologies :</strong>Java,GWT,Polymer,Antlr String Template
-                                         </p>
+                                        </p>
                                     </TimelineItem>
                                 </Timeline>
                             </div>
@@ -207,7 +278,7 @@ class App extends React.Component {
                                     >
                                         <p>
                                             <strong>Qualification:</strong> Bachelor of Engineering-Computer Science
-                                        <br />
+                                            <br />
                                             <strong>University/Board::</strong>  Anna University
                                         </p>
                                     </TimelineItem>
@@ -219,7 +290,7 @@ class App extends React.Component {
                                     >
                                         <p>
                                             <strong>Qualification:</strong> AISSCE
-                                        <br />
+                                            <br />
                                             <strong>University/Board::</strong> CBSE
                                         </p>
                                     </TimelineItem>
@@ -231,7 +302,7 @@ class App extends React.Component {
                                     >
                                         <p>
                                             <strong>Qualification:</strong> AISSE
-                                        <br />
+                                            <br />
                                             <strong>University/Board::</strong> CBSE
                                         </p>
                                     </TimelineItem>
