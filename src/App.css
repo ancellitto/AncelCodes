@@ -21,7 +21,9 @@ color: #fff;
   height: 100%;
 }
 
-
+.header{
+  transition: all .5s;
+}
 
 .entry .body {
   color: #fff !important;
@@ -46,17 +48,22 @@ color: #fff;
 .Cursor {
   font-size: 6rem;
 }
-
+.typing-header{
+  transition:all 2s ease-out;
+  padding-top: 15%;
+  padding-bottom: 5%;
+  
+}
 .fadeOut {
   opacity: 0;
-  /* width: 0;
-  height: 0; */
-  transition: width 0.5s 0.5s, height 0.5s 0.5s, opacity 0.5s;
+  transition:all 2s ease-out;
+  flex: 0;
 }
 
 .fadeIn {
   opacity: 1;
-  transition: width 0.5s, height 0.5s, opacity 0.5s 1s;
+  transition:all 2s ease-out;
+  flex: 1;
 }
 
 .content {
@@ -149,15 +156,15 @@ a.navbar-brand:hover, a.nav-link:hover {
   text-decoration: none;
 }
 
-/* .download {
-  position: fixed;
-  left: 90%;
-  top: 1%;
-  transform: translateX(-50%);
-  color: #fff;
-  background-color: rgba(0, 0, 0, 0.5);
-} */
+.download {
+  text-decoration: none;
+}
 
+.download:hover {
+  text-decoration: none;
+  
+  color: #ca375f !important;
+}
 .aside {
   background: #1a1d24;
   opacity: .7;
@@ -192,7 +199,6 @@ a.navbar-brand:hover, a.nav-link:hover {
 
 .tagcloud {
   font-size: 25px;
-  width: 100vw !important;
 }
 
 .tagcloud--item {
@@ -225,7 +231,7 @@ a.navbar-brand:hover, a.nav-link:hover {
   .Cursor {
     font-size: 3.4rem;
   }
-  .h1 {
+  .h3 {
     font-size: 2rem;
   }
 }
@@ -246,7 +252,7 @@ a.navbar-brand:hover, a.nav-link:hover {
   .Cursor {
     font-size: 3rem;
   }
-  .h1 {
+  .h3 {
     font-size: 1rem;
   }
 }

@@ -36,7 +36,7 @@ class Navbar extends Component {
                     <a className="navbar-brand" href="#home"><i className="fab fa-connectdevelop"></i> <span>{this.state.name}</span></a>
                     <div className="navbar-nav flex-row flex-md-column" >
                         {this.state.items.map(this.renderNavItem)}
-                        <a className="download nav-link" href="./resources/AncelResume.pdf" target="_blank">
+                        <a className="nav-link" href="./resources/AncelResume.pdf" target="_blank">
                             <i className="fas fa-download accent2" />
                             <span className="d-none d-md-inline">{" Resume"}</span>
                         </a>

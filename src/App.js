@@ -59,11 +59,12 @@ class App extends React.Component {
 
             <div className="container-fluid">
                 <Background/>
-                <header className=" min-vh-100 d-flex align-items-center flex-column justify-content-center text-center " id="home">
+                <header className=" header min-vh-100 d-flex align-items-center flex-column justify-content-center text-center " id="home">
 
                     <Typist
                         avgTypingDelay={100}
                         onTypingDone={this.onHeaderTyped}
+                        className="typing-header"
                     >
                         <span className="display-1">
                             Hi!&nbsp; 
@@ -78,8 +79,7 @@ class App extends React.Component {
                         <Typist.Delay ms={600} />
                         <span className="accent1">Polyglot Pragmatic Developer</span></span>
                     </Typist>
-                    <div>
-                        <div className={`h1 ${this.state.renderMsg ? "fadeIn" : "fadeOut"}`}>
+                        <div className={`h3 ${this.state.renderMsg ? "fadeIn" : "fadeOut"}`}>
                             My primary area of interest is in back-end and front-end technologies. With over 8 years of experience,
                             I have architectured and built complex enterprise grade applications. I am passionate about coding and learning new technologies. 
                             I have the most experience in the below skills  
@@ -88,8 +88,9 @@ class App extends React.Component {
                             </p>
                             <br />
                             <p className={`h3`}>
-                             You can read about my skills, experience, education and much much more in the attached pdf which you can find below
+                             You can read about my skills, experience, education and much much more below or <a className="download accent2" href="./resources/AncelResume.pdf" target="_blank">download</a> it
                              </p>
+                             <br/>
                             <div className="contacts">
                                 <a href="mailto:contact@ancel.codes" className="social-link far fa-envelope " target="_blank" rel="noopener noreferrer" alt="email" ></a>
                                 <a href="https://www.linkedin.com/in/ancellitto" className="social-link fab fa-linkedin " target="_blank" rel="noopener noreferrer" alt="linkedin"></a>
@@ -98,10 +99,6 @@ class App extends React.Component {
                             <br/>
                             <a href="#mastery" class="scroll-down" address="true"></a>                  
                         </div>
-
-                    </div>
-
-
                 </header>
 
                 <div className="row">
@@ -159,7 +156,7 @@ class App extends React.Component {
                                             </strong>
                                             <br />
                                             Event Management Tool  helps to efficiently plan, manage and conduct events organized by the
-                                            bank for its clients.The tool was built on legacy technologies like java 6 and jsf now moving
+                                            institution for its clients.The tool was built on legacy technologies like java 6 and jsf now moving
                                             towards newer technology stack using microservices with spring boot, docker, kubernetes and
                                             open shift. I am involved in migrating the project to a newer tech stack. I am helping in
                                             defining the new target architecture and lay migration strategy to gracefully move away from
@@ -183,7 +180,7 @@ class App extends React.Component {
                                         </p>
                                         <p>
                                             <strong>
-                                                Project: Advisory tool for Relationship Managers for a large banking institution in Switzerland(July 2019- July 2020)
+                                                Project: Advisory tool for Relationship Managers for a large banking institution(July 2019- July 2020)
                                             </strong>
                                             <br />
 
