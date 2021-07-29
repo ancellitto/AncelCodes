@@ -156,7 +156,7 @@ class App extends React.Component {
                                             </strong>
                                             <br />
                                             Event Management Tool  helps to efficiently plan, manage and conduct events organized by the
-                                            institution for its clients.The tool was built on legacy technologies like java 6 and jsf now moving
+                                            institution for its clients.The tool was built on old techonologies and now moving
                                             towards newer technology stack using microservices with spring boot, docker, kubernetes and
                                             open shift. I am involved in migrating the project to a newer tech stack. I am helping in
                                             defining the new target architecture and lay migration strategy to gracefully move away from
